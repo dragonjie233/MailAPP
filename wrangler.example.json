@@ -1,0 +1,32 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mailapp",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-01-24",
+  "observability": {
+    "enabled": false
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "jwtsecret": "",
+    "totpsecret": "",
+    "siteurl": "",
+    "pushurl": ""
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "mail-app",
+      "database_id": ""
+    }
+  ],
+  "assets": {
+    "directory": "public"
+  }
+}
